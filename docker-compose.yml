@@ -1,0 +1,19 @@
+version: '3'
+
+services:
+  subconverter:
+    build:
+      context: .
+      args:
+        SERVER_NAME: _
+    ports:
+      - "80:80"
+    depends_on:
+      - frontend
+      - backend
+
+  frontend:
+    image: careywong/subweb:latest
+
+  backend:
+    image: tindy2013/subconverter:latest
