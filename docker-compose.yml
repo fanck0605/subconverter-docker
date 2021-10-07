@@ -13,7 +13,7 @@ services:
       - backend
 
   frontend:
-    image: careywong/subweb:latest
+    build: ./sub-web
 
   backend:
     image: tindy2013/subconverter:latest
